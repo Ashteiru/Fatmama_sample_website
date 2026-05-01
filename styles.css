@@ -231,12 +231,6 @@ body {
 
 .design-cake-icons i:last-child {
     font-size: 2rem;
-    animation: sparkle 0.6s ease-in-out infinite;
-}
-
-@keyframes sparkle {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.7; transform: scale(1.2); }
 }
 
 .design-cake-content h3 {

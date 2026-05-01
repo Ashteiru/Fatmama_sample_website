@@ -43,6 +43,23 @@ document.querySelectorAll('.cta-button, .cta-button-large').forEach(button => {
     });
 });
 
+// Floating Chatbot Button
+const floatingChatbot = document.getElementById('floating-chatbot');
+if (floatingChatbot) {
+    floatingChatbot.addEventListener('click', () => {
+        alert('🤖 AI Chatbot is starting... Connect with us for instant support!');
+        // This will be connected to actual chatbot service in future
+    });
+
+    // Hide/Show floating button on scroll
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            floatingChatbot.style.opacity = '1';
+            floatingChatbot.style.pointerEvents = 'auto';
+        }
+    });
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Mama & Co. Website Loaded');

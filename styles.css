@@ -89,6 +89,14 @@ body {
     color: var(--secondary-color);
 }
 
+.ai-chat-link {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.6rem 1.2rem;
+    border-radius: 2px;
+    font-weight: 600;
+}
+
 .nav-right {
     display: flex;
     gap: 2rem;
@@ -183,6 +191,76 @@ body {
     font-weight: 600;
     font-size: 0.95rem;
     letter-spacing: 0.3px;
+}
+
+/* ================== AI FEATURES ================== */
+.ai-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 40px;
+    background: linear-gradient(135deg, rgba(26, 58, 46, 0.03) 0%, rgba(212, 175, 55, 0.03) 100%);
+}
+
+.ai-feature-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 0;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.ai-feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--secondary-color);
+}
+
+.ai-icon {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.ai-feature-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.ai-feature-card p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.ai-feature-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 32px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.ai-feature-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 /* ================== FEATURED PRODUCTS ================== */
@@ -549,6 +627,36 @@ body {
     font-size: 0.85rem;
 }
 
+/* ================== FLOATING CHATBOT BUTTON ================== */
+.floating-chatbot {
+    position: fixed;
+    bottom: 3rem;
+    right: 2rem;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #e8c451 100%);
+    border: none;
+    border-radius: 50%;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+    transition: all 0.3s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-chatbot:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.6);
+}
+
+.floating-chatbot:active {
+    transform: scale(0.95);
+}
+
 /* ================== RESPONSIVE DESIGN ================== */
 @media (max-width: 1024px) {
     .navbar-container {
@@ -582,6 +690,11 @@ body {
         font-size: 0.85rem;
     }
 
+    .ai-chat-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+
     .hero {
         height: 450px;
         margin-top: 0;
@@ -610,6 +723,11 @@ body {
 
     .products-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .ai-features {
+        padding: 2rem 20px;
         gap: 1.5rem;
     }
 
@@ -653,6 +771,11 @@ body {
         gap: 1rem;
     }
 
+    .ai-chat-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.65rem;
+    }
+
     .hero {
         height: 350px;
     }
@@ -690,6 +813,19 @@ body {
 
     .product-price {
         padding: 0 1rem 1rem;
+    }
+
+    .ai-features {
+        padding: 2rem 15px;
+        grid-template-columns: 1fr;
+    }
+
+    .ai-feature-card {
+        padding: 2rem;
+    }
+
+    .ai-icon {
+        font-size: 3rem;
     }
 
     .services {
